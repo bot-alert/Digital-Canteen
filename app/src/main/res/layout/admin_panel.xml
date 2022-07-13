@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+  <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+      <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="8dp">
+
+        <ImageView
+                android:id="@+id/logoAdminPanel"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@mipmap/logo"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/logoAdminPanel"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/digital_canteen"
+                android:textColor="@color/textSecondaryColor"
+                android:textSize="18dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/hey_admin"
+                android:textColor="@color/textPrimaryColor"
+                android:textSize="16dp"/>
+
+
+      </RelativeLayout>
+
+
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="8dp"
+              android:orientation="vertical"
+              android:padding="8dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/today_s_income"
+                android:textAlignment="center"
+                android:textColor="@color/textSecondaryColor"
+                android:textSize="18dp"/>
+
+        <TextView
+                android:id="@+id/adminPanelTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Rs.0"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimaryColor"
+                android:textSize="30dp"/>
+
+      </LinearLayout>
+
+      <androidx.cardview.widget.CardView
+              android:id="@+id/QRLogoCard"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/QRLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_marginBottom="8dp"
+                  android:src="@mipmap/qrcodelogo"/>
+
+          <TextView
+                  android:id="@+id/QRLogoText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/QRLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/qr"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp"/>
+
+          <ImageView
+                  android:id="@+id/QRLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/QRLogoText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/QRLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/QRLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/QRLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/help_s_you_scan_qr_for_order"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+              android:id="@+id/viewOrderLogoCard"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/viewOrderLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="8dp"
+                  android:src="@mipmap/view_order_logo"/>
+
+          <TextView
+                  android:id="@+id/logoAdminPanelText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/viewOrderLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/order"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp"/>
+
+          <ImageView
+                  android:id="@+id/viewOrderLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/logoAdminPanelText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/viewOrderLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/viewOrderLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/viewOrderLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/help_s_you_to_view_of_order_for_the_day"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+              android:id="@+id/addFoodLogoCard"
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/addFoodLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="8dp"
+                  android:src="@mipmap/add_food_logo"/>
+
+          <TextView
+                  android:id="@+id/addFoodLogoText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/addFoodLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/food"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp"/>
+
+          <ImageView
+                  android:id="@+id/addFoodLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/addFoodLogoText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/addFoodLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/addFoodLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/addFoodLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/help_s_you_to_add_new_food_for_the_users"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+              android:id="@+id/addUserLogoCard"
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/addUserLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="8dp"
+                  android:src="@mipmap/add_user_logo"/>
+
+          <TextView
+                  android:id="@+id/addUserLogoText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/addUserLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/user"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp"/>
+
+          <ImageView
+                  android:id="@+id/addUserLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/addUserLogoText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/addUserLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/addUserLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/addUserLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/help_s_you_add_new_user_to_system"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+              android:id="@+id/logLogoCard"
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/logLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="8dp"
+                  android:src="@mipmap/log_logo"/>
+
+          <TextView
+                  android:id="@+id/logLogoText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/logLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/log"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp"/>
+
+          <ImageView
+                  android:id="@+id/logLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/logLogoText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/logLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/logLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/logLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/help_s_you_look_for_log_of_the_day"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+              android:id="@+id/analysisLogoCard"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/analysisLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_marginBottom="8dp"
+                  android:src="@mipmap/analysis_logo"/>
+
+          <TextView
+                  android:id="@+id/analysisLogoText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/analysisLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/analysis"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp"/>
+
+          <ImageView
+                  android:id="@+id/analysisLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/analysisLogoText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/analysisLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/analysisLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/analysisLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="@string/help_s_you_analysis_your_business"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+      <androidx.cardview.widget.CardView
+              android:id="@+id/AlgoLogoCard"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"
+              android:padding="8dp"
+              app:cardCornerRadius="25dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+          <ImageView
+                  android:id="@+id/AlgoLogo"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_marginBottom="8dp"
+                  android:src="@mipmap/bestseller" />
+
+          <TextView
+                  android:id="@+id/AlgoLogoText"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_toRightOf="@+id/AlgoLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="Best Selling"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="18dp" />
+
+          <ImageView
+                  android:id="@+id/AlgoLogoLine"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/AlgoLogoText"
+                  android:layout_marginLeft="8dp"
+                  android:layout_toRightOf="@+id/AlgoLogo"
+                  android:src="@drawable/horizantle_line"/>
+
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/AlgoLogoLine"
+                  android:layout_gravity="center"
+                  android:layout_marginStart="8dp"
+                  android:layout_toRightOf="@+id/AlgoLogo"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:text="Helps determine what to sell based on data set"
+                  android:textAlignment="center"
+                  android:textColor="@color/textSecondaryColor"
+                  android:textSize="12dp"/>
+        </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+  </ScrollView>
+
+
+</LinearLayout>

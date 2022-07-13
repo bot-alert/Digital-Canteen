@@ -1,0 +1,41 @@
+<resources>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+
+  </style>
+  <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+  <style name="Theme.AppCompat.Light.NoActionBar.Ashish" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowFullscreen">false</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+  <style name="AppTheme.WhiteAccent">
+    <item name="colorAccent">@color/colorPrimary</item> <!-- Whatever color you want-->
+
+  </style>
+  <style name="BottomSheetDilougeTheme" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/Buttonsheetstyle</item>
+  </style>
+  <style name="Buttonsheetstyle" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+  <style name="QrTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+</resources>

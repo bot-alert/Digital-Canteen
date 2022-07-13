@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+  <LinearLayout
+          android:layout_marginTop="30dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:orientation="vertical">
+    <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="@string/digital_canteen"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/Emailoflogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.567"/>
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+      <LinearLayout
+
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+        <EditText
+                android:id="@+id/Emailoflogin"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/white_curve"
+                android:backgroundTint="@color/appBlack"
+                android:fontFamily="@font/poppinslight"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="60"
+                android:paddingLeft="20dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+        />
+        <FrameLayout
+                android:id="@+id/mainActivityFrameLayout"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+          <EditText
+                  android:layout_gravity="center_horizontal"
+                  android:id="@+id/Passwordlogin"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="12dp"
+                  android:background="@drawable/white_curve"
+                  android:backgroundTint="@color/appBlack"
+                  android:fontFamily="@font/poppinslight"
+                  android:hint="@string/password"
+                  android:inputType="textPassword"
+                  android:maxLength="18"
+                  android:paddingLeft="20dp"
+                  android:textColor="#FFFFFF"
+                  android:textColorHint="#FFFFFF"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintHorizontal_bias="0.491"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/Emailoflogin"/>
+          <TextView
+                  android:layout_gravity="end|center_vertical"
+                  android:id="@+id/passwordToogle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:backgroundTint="#FFFFFF"
+                  android:layout_marginRight="8dp"
+                  android:layout_marginTop="8dp"
+                  android:padding="8dp"
+                  android:fontFamily="@font/poppinslight"
+                  android:text="@string/show"
+                  android:textColor="#FFFFFF"/>
+        </FrameLayout>
+        <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_gravity="end|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="@string/forgot_password"
+                android:textColor="@color/textPrimaryColor"/>
+        <Button
+                android:layout_gravity="center_horizontal"
+
+                android:id="@+id/loginbutton"
+                android:layout_width="325dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_rectangele"
+                android:backgroundTint="@color/green"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/login"
+                android:textColor="@color/white"/>
+      </LinearLayout>
+
+      <ProgressBar
+
+              android:id="@+id/progressBarLoginPage"
+              android:layout_width="92dp"
+              android:layout_height="92dp"
+              android:layout_marginTop="30dp"
+              android:layout_gravity="center_horizontal"
+              android:indeterminateTint="@color/green"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.498"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </FrameLayout>
+
+
+  </LinearLayout>
+
+
+</LinearLayout>

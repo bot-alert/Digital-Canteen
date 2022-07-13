@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   android:id="@+id/qrcodeLayout"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="match_parent"
+                                   android:layout_margin="8dp"
+                                   android:background="@color/white">
+
+  <RelativeLayout
+          android:id="@+id/qrRelativeLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginRight="8dp"
+          android:background="@color/white">
+
+    <LinearLayout
+            android:id="@+id/qrLinerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+      <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white">
+
+        <ImageView
+                android:layout_margin="4dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/logo"/>
+        <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:paddingTop="10dp"
+                  android:paddingBottom="10dp"
+                  android:text="@string/token_no"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="16sp"/>
+
+          <TextView
+                  android:id="@+id/tokenNoOfQrCode"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:fontFamily="@font/poppinsmedium"
+                  android:paddingTop="10dp"
+                  android:paddingBottom="10dp"
+                  android:textAlignment="center"
+                  android:textColor="@color/textPrimaryColor"
+                  android:textSize="16sp"/>
+        </LinearLayout>
+
+      </RelativeLayout>
+
+
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+          <ImageView
+                  android:id="@+id/qrCodeImage"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <TextView
+              android:layout_gravity="center"
+              android:fontFamily="@font/poppinsmedium"
+              android:layout_width="wrap_content"
+              android:textSize="12dp"
+              android:textColor="@color/textPrimaryColor"
+              android:layout_height="wrap_content"
+              android:text="@string/scan_this_code_to_process_you_order"/>
+    </LinearLayout>
+  </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

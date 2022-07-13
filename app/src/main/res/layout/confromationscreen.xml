@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/rlayout"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="match_parent"
+                                   android:layout_margin="8dp"
+                                   android:background="@drawable/roundeddilouge"
+                                   app:cardCornerRadius="40dp">
+
+  <RelativeLayout
+          android:id="@+id/confromRelativeLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginRight="8dp"
+          android:background="@color/white">
+
+    <RelativeLayout
+            android:id="@+id/relativeWithHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp">
+
+      <ImageView
+              android:id="@+id/cart"
+              android:layout_width="46dp"
+              android:layout_height="46dp"
+              android:src="@mipmap/cart"/>
+
+      <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_margin="4dp"
+              android:layout_toRightOf="@+id/cart"
+              android:fontFamily="@font/poppinsbold"
+              android:text="@string/your_basket"
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="16dp"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeWithHeading"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+      <TextView
+              android:id="@+id/name"
+              android:layout_width="wrap_content"
+              android:textAlignment="textStart"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_weight="4"
+              android:fontFamily="@font/poppinsbold"
+              android:textColor="@color/textSecondaryColor"
+              android:textSize="16dp"/>
+
+      <TextView
+
+              android:id="@+id/count"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_weight="1"
+              android:fontFamily="@font/poppinsmedium"
+              android:textAlignment="center"
+              android:textColor="@color/textSecondaryColor"
+              android:textSize="16dp"/>
+
+
+      <TextView
+              android:id="@+id/prize"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:fontFamily="@font/poppinsmedium"
+              android:textAlignment="center"
+              android:textColor="@color/textSecondaryColor"
+              android:textSize="16dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/relative3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative2"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+      <TextView
+              android:id="@+id/totalname"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:fontFamily="@font/poppinsbold"
+              android:text="@string/total_amount"
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="16dp"/>
+
+      <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+
+              android:layout_toLeftOf="@+id/total"
+              android:fontFamily="@font/poppinsbold"
+              android:text="RS. "
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="16dp"/>
+
+      <TextView
+              android:id="@+id/total"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+
+              android:fontFamily="@font/poppinsbold"
+              android:text=""
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="16dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative3">
+
+      <Button
+              android:id="@+id/confrom"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_marginStart="16dp"
+              android:layout_marginTop="16dp"
+              android:layout_marginEnd="16dp"
+              android:layout_marginBottom="16dp"
+              android:background="@drawable/confrim_button"
+              android:fontFamily="@font/poppinssemibold"
+              android:text="@string/confirm_order"
+              android:textColor="@color/white"
+              android:textSize="20dp"/>
+
+      <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/confrom"
+              android:layout_centerHorizontal="true"
+              android:layout_margin="8dp"
+              android:background="@drawable/confromation_button_line"/>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

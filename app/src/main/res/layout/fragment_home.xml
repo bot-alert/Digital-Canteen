@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+  <com.facebook.shimmer.ShimmerFrameLayout
+          android:id="@+id/shimmerHomePageFrameLayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:orientation="vertical">
+
+    <include layout="@layout/shimmer_homepage"/>
+
+  </com.facebook.shimmer.ShimmerFrameLayout>
+
+  <RelativeLayout
+          android:id="@+id/homePageMainLayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/logoAndTileBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+      <ImageView
+              android:id="@+id/logo"
+              android:layout_width="46dp"
+              android:layout_height="46dp"
+              android:src="@mipmap/logo"/>
+
+      <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="8dp"
+              android:layout_toRightOf="@+id/logo"
+              android:textColor="@color/textSecondaryColor"
+              android:fontFamily="@font/poppinsmedium"
+              android:text="@string/digital_canteen"
+              android:textSize="18dp"/>
+
+      <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/homePageUserImage"
+              android:layout_width="46dp"
+              android:layout_height="46dp"
+              android:layout_alignParentRight="true"
+              app:civ_border_color="#ffffff"
+              app:civ_border_width="2dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoAndTileBar"
+            android:padding="8dp">
+
+      <TextView
+              android:id="@+id/heyText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/poppinsbold"
+              android:text="@string/hey"
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="20dp"/>
+
+      <TextView
+              android:id="@+id/homePageUserName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/heyText"
+              android:fontFamily="@font/poppinsbold"
+              android:text=""
+              android:textColor="@color/textPrimaryColor"
+              android:textSize="20dp"/>
+
+      <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/heyText"
+              android:fontFamily="@font/poppinsmedium"
+              android:text="@string/what_do_you_want_to_eat_today"
+              android:textColor="#717171"
+              android:textSize="16dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/welcomeText">
+
+      <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="60dp"
+              android:overScrollMode="never"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+              android:id="@+id/floatingActionButton1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_marginLeft="20dp"
+              android:layout_marginBottom="117dp"
+              android:src="@mipmap/tick"
+              app:backgroundTint="@color/textPrimaryColor"/>
+    </RelativeLayout>
+  </RelativeLayout>
+</RelativeLayout>
